@@ -8,10 +8,9 @@ import Main from "../component/Main";
 export default function Home() {
   const colorScheme = Appearance.getColorScheme();
   const [theme, setTheme] = useState(colorScheme);
-  // if (colorScheme === 'dark') {
-  //   // Use dark color scheme
-  // }
+
   const [loading, setLoading] = useState(false);
+
   return (
     <View style={styles.container}>
       <View

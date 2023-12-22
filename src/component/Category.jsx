@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ImageCard from "./ImageCard";
 import axios from "axios";
 
-export default function Category({ title, url }) {
+export default function Category({ title, url, type }) {
   const [dishes, setDishes] = useState([]);
 
   const fetchData = async () => {
@@ -15,7 +15,7 @@ export default function Category({ title, url }) {
         setDishes(data?.categories);
       } else {
         const { data } = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/filter.php?c=${url}`
+          `https://www.themealdb.com/api/json/v1/1/filter.php?${type}=${url}`
         );
         setDishes(data?.meals);
       }
@@ -27,7 +27,9 @@ export default function Category({ title, url }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>
+        {url === "/categories.php" ? `${title} ` : `Category : ${title}`}
+      </Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {dishes?.map((dish, i) => {
           return (

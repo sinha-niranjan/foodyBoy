@@ -26,21 +26,21 @@ export default function Footer() {
       <TouchableOpacity
         style={{ alignItems: "center" }}
         onPress={() => {
-          navigation.navigate("Dessert");
+          navigation.navigate("Cuisine");
         }}
       >
         <FontAwesome5Icon
           name="ice-cream"
           style={styles.icon}
-          color={route.name === "Dessert" ? "#2B964F" : "#ffffff"}
+          color={route.name === "Cuisine" ? "#2B964F" : "#ffffff"}
         />
-        <Text style={{ color: "#ffffff" }}>Dessert</Text>
+        <Text style={{ color: "#ffffff" }}>Cuisine</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={{ alignItems: "center" }}
         onPress={() => {
-          navigation.navigate("Search");
+          navigation.navigate("Ingrediants");
         }}
       >
         <FontAwesome5Icon
@@ -48,7 +48,7 @@ export default function Footer() {
           style={styles.icon}
           color={route.name === "Search" ? "#2B964F" : "#ffffff"}
         />
-        <Text style={{ color: "#ffffff" }}>Search</Text>
+        <Text style={{ color: "#ffffff" }}>Ingrediants</Text>
       </TouchableOpacity>
 
       <TouchableOpacity

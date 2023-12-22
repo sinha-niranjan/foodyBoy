@@ -1,10 +1,9 @@
-import { Appearance, StyleSheet, Text, View } from "react-native";
+import { Appearance, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import Header from "../component/Header";
-import Main from "../component/Main";
 import Footer from "../component/Footer";
+import Categories from "../component/Categories";
 
-export default function Dessert() {
+export default function Cuisine() {
   const colorScheme = Appearance.getColorScheme();
   const [theme, setTheme] = useState(colorScheme);
   return (
@@ -17,9 +16,13 @@ export default function Dessert() {
           },
         ]}
       >
-        <Text style={styles.headingText}> Dessert</Text>
+        <Text style={styles.headingText}> Cuisine </Text>
       </View>
-      <View style={styles.main}></View>
+      <View style={styles.main}>
+        <ScrollView>
+          <Categories type="a" />
+        </ScrollView>
+      </View>
       <View style={styles.footer}>
         <Footer />
       </View>

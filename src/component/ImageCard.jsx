@@ -5,6 +5,7 @@ export default function ImageCard({ imageUrl, type }) {
   return (
     <View style={styles.imageContainer}>
       <Image
+        
         source={{
           uri: imageUrl,
         }}

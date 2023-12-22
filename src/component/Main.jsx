@@ -5,17 +5,19 @@ import Banner from "./Banner";
 import Categories from "./Categories";
 
 export default function Main() {
+
+  
   return (
     <View style={styles.container}>
       <View style={{ height: 80 }}>
         <SearchBar />
       </View>
-      <ScrollView >
+      <ScrollView>
         <View style={{ flex: 1, height: 200 }}>
           <Banner />
         </View>
         <View>
-          <Categories />
+          <Categories type={"c"} />
         </View>
       </ScrollView>
     </View>

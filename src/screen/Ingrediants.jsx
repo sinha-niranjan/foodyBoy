@@ -1,11 +1,11 @@
-import { Appearance, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
-import Footer from '../component/Footer';
-import Main from '../component/Main';
+import { Appearance, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import Footer from "../component/Footer";
+import Categories from "../component/Categories";
 
-export default function Search() {
-    const colorScheme = Appearance.getColorScheme();
-    const [theme, setTheme] = useState(colorScheme);
+export default function Ingrediants() {
+  const colorScheme = Appearance.getColorScheme();
+  const [theme, setTheme] = useState(colorScheme);
   return (
     <View style={styles.container}>
       <View
@@ -16,16 +16,18 @@ export default function Search() {
           },
         ]}
       >
-         <Text style={styles.headingText}> Search </Text>
+        <Text style={styles.headingText}> Ingrediants </Text>
       </View>
       <View style={styles.main}>
-        <Main />
+        <ScrollView>
+          <Categories type="i" />
+        </ScrollView>
       </View>
       <View style={styles.footer}>
         <Footer />
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({

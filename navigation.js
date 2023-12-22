@@ -1,10 +1,10 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./src/screen/Home";
-import Dessert from "./src/screen/Dessert";
 import NonVeg from "./src/screen/NonVeg";
 import Veg from "./src/screen/Veg";
-import Search from "./src/screen/Search";
+import Cuisine from "./src/screen/Cuisine";
+import Ingrediants from "./src/screen/Ingrediants";
 
 const RootNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -16,13 +16,13 @@ const RootNavigation = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Dessert"
-        component={Dessert}
+        name="Cuisine"
+        component={Cuisine}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Search"
-        component={Search}
+        name="Ingrediants"
+        component={Ingrediants}
         options={{ headerShown: false }}
       />
       <Stack.Screen
