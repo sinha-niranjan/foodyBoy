@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
           navigation.navigate("Home");
         }}
       >
-        <FontAwesome5Icon
+        <FontAwesome5
           name="home"
           style={styles.icon}
           color={route.name === "Home" ? "#2B964F" : "#ffffff"}
@@ -29,11 +29,12 @@ export default function Footer() {
           navigation.navigate("Cuisine");
         }}
       >
-        <FontAwesome5Icon
-          name="ice-cream"
+        <FontAwesome5 
+          name="globe-asia"
           style={styles.icon}
           color={route.name === "Cuisine" ? "#2B964F" : "#ffffff"}
         />
+         
         <Text style={{ color: "#ffffff" }}>Cuisine</Text>
       </TouchableOpacity>
 
@@ -43,8 +44,8 @@ export default function Footer() {
           navigation.navigate("Ingrediants");
         }}
       >
-        <FontAwesome5Icon
-          name="search"
+        <FontAwesome5 
+          name="list"
           style={styles.icon}
           color={route.name === "Search" ? "#2B964F" : "#ffffff"}
         />
@@ -57,7 +58,7 @@ export default function Footer() {
           navigation.navigate("NonVeg");
         }}
       >
-        <FontAwesome5Icon
+        <FontAwesome5 
           name="egg"
           style={styles.icon}
           color={route.name === "NonVeg" ? "#2B964F" : "#ffffff"}
@@ -71,7 +72,7 @@ export default function Footer() {
           navigation.navigate("Veg");
         }}
       >
-        <FontAwesome5Icon
+        <FontAwesome5 
           name="pizza-slice"
           style={styles.icon}
           color={route.name === "Veg" ? "#2B964F" : "#ffffff"}
