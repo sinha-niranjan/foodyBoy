@@ -1,17 +1,11 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
-import Footer from "../component/Footer";
-import Header from "../component/Header";
-import { Appearance } from "react-native";
-import Main from "../component/Main";
+import { Appearance, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import Footer from '../component/Footer';
+import Main from '../component/Main';
 
-export default function Home() {
-  const colorScheme = Appearance.getColorScheme();
-  const [theme, setTheme] = useState(colorScheme);
-  // if (colorScheme === 'dark') {
-  //   // Use dark color scheme
-  // }
-  const [loading, setLoading] = useState(false);
+export default function Search() {
+    const colorScheme = Appearance.getColorScheme();
+    const [theme, setTheme] = useState(colorScheme);
   return (
     <View style={styles.container}>
       <View
@@ -22,7 +16,7 @@ export default function Home() {
           },
         ]}
       >
-        <Header />
+         <Text style={styles.headingText}> Search </Text>
       </View>
       <View style={styles.main}>
         <Main />
@@ -31,7 +25,7 @@ export default function Home() {
         <Footer />
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -41,9 +35,11 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 100,
-
-    justifyContent: "center",
-    alignItems: "center",
+  },
+  headingText: {
+    fontSize: 22,
+    marginTop: 50,
+    marginLeft: 30,
   },
 
   main: {

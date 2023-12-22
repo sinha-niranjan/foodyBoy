@@ -1,17 +1,10 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Appearance, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import Footer from "../component/Footer";
-import Header from "../component/Header";
-import { Appearance } from "react-native";
-import Main from "../component/Main";
 
-export default function Home() {
+export default function Veg() {
   const colorScheme = Appearance.getColorScheme();
   const [theme, setTheme] = useState(colorScheme);
-  // if (colorScheme === 'dark') {
-  //   // Use dark color scheme
-  // }
-  const [loading, setLoading] = useState(false);
   return (
     <View style={styles.container}>
       <View
@@ -22,11 +15,9 @@ export default function Home() {
           },
         ]}
       >
-        <Header />
+        <Text style={styles.headingText}> Vegeterian </Text>
       </View>
-      <View style={styles.main}>
-        <Main />
-      </View>
+      <View style={styles.main}></View>
       <View style={styles.footer}>
         <Footer />
       </View>
@@ -41,9 +32,11 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 100,
-
-    justifyContent: "center",
-    alignItems: "center",
+  },
+  headingText: {
+    fontSize: 22,
+    marginTop: 50,
+    marginLeft: 30,
   },
 
   main: {

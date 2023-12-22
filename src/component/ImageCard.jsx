@@ -1,16 +1,16 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export default function ImageCard() {
+export default function ImageCard({ imageUrl, type }) {
   return (
     <View style={styles.imageContainer}>
       <Image
         source={{
-          uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeoF7RH7sQ5yTtYQ91p2Mz7_2B85zkwP3204vcp7EV0Q&s",
+          uri: imageUrl,
         }}
         style={styles.image}
       />
-      <Text style={styles.itemName}>Food Item </Text>
+      <Text style={styles.itemName}> {type} </Text>
     </View>
   );
 }
